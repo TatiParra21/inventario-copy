@@ -1,0 +1,35 @@
+---
+
+import { Image } from "astro:assets";
+import blogPageIcon from '../assets/small-icons/icon-blogsco.webp';
+import instagramIcon from '../assets/small-icons/icon-inssco.webp';
+import linkedinIcon from '../assets/small-icons/icon-linsco.webp';
+import whatsAppIcon from '../assets/small-icons/icon-whasco.webp';
+import youtubeIcon from '../assets/small-icons/icon-yousco.webp';
+const { variant = "normal" } = Astro.props;
+---
+
+<div class=`flex flex-row gap-4 mt-4 ${variant} `>
+				<Image src={instagramIcon} class={`h-5 icon w-5 `}  alt="Icon for Inventario Instagram" />
+				<Image src={linkedinIcon} class={`h-5 icon w-5 `}  alt="Icon for Inventario LinkedIn" />
+				<Image src={youtubeIcon} class={`h-5 icon w-5 `}  alt="Icon for Inventario YouTube" />
+				<Image src={whatsAppIcon} class={`h-5 icon w-5 `}  alt="Icon for Inventario WhatsApp" />
+				<Image src={blogPageIcon} class={`h-5 icon w-5 `}  alt="Icon for Inventario Blog" />
+
+</div>
+
+<style>
+	.normal .icon {
+  filter: none;
+}
+
+.gray .icon {
+  filter:invert(25%)
+
+}
+.icon:hover{
+	cursor:pointer;
+	opacity: 50%;
+
+}
+</style>

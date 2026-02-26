@@ -1,0 +1,38 @@
+---
+
+import inventarioLogo from '../assets/inventario.webp';
+import { Image } from "astro:assets";
+import SmallIconsComp from './SmallIconsComp.astro';
+import arrowGif from '../assets/Icon-arrow-down.gif';
+
+---
+
+<div class=" min-h-screen flex-col h-screen  flex items-center justify-evenly  w-screen ">	
+		<section class="flex flex-col pt-24 text-[50%]  items-center  justify-center" id="first-section">	
+				<Image src={inventarioLogo} class="w-[15vw] h-auto hover:cursor-pointer"  alt="Inventario Logo" />		
+			<h1 class="text-center mt-4 text-white font-bold ">
+				DIGITAL EXPERIENCES AND INNOVATION LAB
+			</h1>
+			<p class="text-white text-sm">Panamá, Ciudad del Saber</p>
+			<SmallIconsComp/>
+		</section>
+		<div class="flex mb-12 text-[70%]  items-center flex-col">
+			<a href="#second-part">
+			<Image src={arrowGif} class="h-[10vh] w-auto hover:cursor-pointer" alt="arrow down gif"/>
+			</a>
+				<footer class="flex  text-white flex-col  font-[200] items-center">
+						<p>Copyright @ 2025 Inventario Panamá</p>			
+						<p>a GWT partner.</p>
+					</footer>
+		</div>	
+</div>
+
+<style>
+	
+p{
+	margin:0;}
+		h1 {
+			line-height: 1.5;
+		}	
+	
+</style>

@@ -1,0 +1,15 @@
+---
+import inventarioLogo from '../assets/inventario.webp';
+import { Image } from "astro:assets";
+---
+
+<header class=" bg-white w-full  ">
+    <div class="flex justify-between  items-center">
+        <Image src={inventarioLogo} class="w-[10vw] hover:cursor-pointer h-auto invert-100" alt="inventario logo" />
+        <nav class=" flex gap-2">
+            <a href="#" class="text-[#6B7280] text-lg font-bold">Conócenos</a>
+            <a href="#" class="text-[#6B7280] text-lg font-bold">Es</a>
+            <a href="#" class="text-[#6B7280] text-lg font-bold">En</a>
+        </nav>
+    </div>
+</header>

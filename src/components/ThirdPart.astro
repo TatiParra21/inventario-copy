@@ -1,0 +1,97 @@
+---
+import arrowGif from '../assets/Icon-arrow-down.gif';
+import { Image } from "astro:assets";
+---
+
+<div id="third-part" class=" min-h-screen flex flex-col items-center justify-center w-screen ">
+	
+		<section class="words-area" id="first-section">			
+                        <h2 class="word word-1">CREATIVIDAD</h2>
+                        <h2 class="word word-2">UX UI</h2>
+                        <h2 class="word word-3">2D &amp; 3D MOTION</h2>
+                        <h2 class="word word-4">AI AGENTS</h2>
+                        <h2 class="word word-5">DISEÑO INTERACTIVO</h2>
+                        <h2 class="word word-6">SOFTWARES</h2>
+                        <h2 class="word word-7">IA</h2>
+                        <h2 class="word word-8">EXPERIENCIAS INMERSIVAS</h2>
+                        <h2 class="word word-9">APPS</h2>
+                        <h2 class="word word-10">ROBÓTICA</h2>
+                        <h2 class="word word-11">PLATAFORMAS WEB</h2>
+                        <h2 class="word word-12">PWAS</h2>
+                        <h2 class="word word-13">ECOMMERCES</h2>
+		</section>
+                <a href="#fourth-part">
+			<Image src={arrowGif} class="h-[10vh] w-auto hover:cursor-pointer" alt="arrow down gif"/>
+		</a>	
+</div>
+
+<style>
+        .words-area{
+        position: relative;
+        width: 100%;
+        height: 90vh;          /* full screen area */
+        overflow: hidden;       /* hide words that go off-screen */
+        animation:
+        drift var(--dur, 10s) ease-in-out infinite,
+        fade var(--fadeDur, 8s) ease-in-out infinite;
+        animation-delay: var(--delay, 0s), var(--fadeDelay, 0s);
+}
+@keyframes fade {
+  0%, 100% { opacity: var(--opMin, 0.15); }
+  20%      { opacity: var(--opMax, 0.85); }
+  55%      { opacity: var(--opMin, 0.15); }
+  75%      { opacity: var(--opMax, 0.7); }
+}
+.word{
+  position: absolute;
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: clamp(18px, 2.4vw, 40px);
+  white-space: nowrap;
+  animation: drift var(--dur, 6s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+  will-change: transform;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(var(--dx, 10px), var(--dy, -10px)); }
+}
+.word-1  { left: 8%;  top: 16%;  --dx:-108px; --dy:-10px; --dur:6s; --delay:-2s; }
+.word-2  { right:10%; top: 16%;  --dx: 74px; --dy: -90px; --dur:5s; --delay:-5s; }
+
+.word-3  { left:38%; top: 22%;  --dx:-80px; --dy: 200px; --dur:14s; --delay:-3s; }
+.word-4  { left:56%; top: 30%;  --dx: 16px; --dy: 200px; --dur:11s; --delay:-7s; }
+
+.word-5  { left:18%; top: 38%;  --dx:-80px; --dy:  100px; --dur:5s; --delay:-1s; }
+.word-6  { right:12%; top:40%;  --dx: 107px; --dy:-50px; --dur:15s; --delay:-6s; }
+
+.word-7  { left:10%; top: 52%;  --dx: -100px; --dy:  100px; --dur: 9s; --delay:-4s; }
+.word-8  { left:40%; top: 54%;  --dx: 200px; --dy: -100px; --dur:10s; --delay:-8s; }
+
+.word-9  { left:70%; top: 72%;  --dx:-160px; --dy: 200px; --dur:12s; --delay:-2s; }
+.word-10 { left:22%; top: 78%;  --dx: 120px; --dy: 160px; --dur:4s; --delay:-9s; opacity:0.2; }
+
+.word-11 { left: 6%; bottom:16%;--dx:-220px; --dy: -100px; --dur:5s; --delay:-10s; opacity:0.7; }
+.word-12 { left:44%; top: 68%;  --dx:  80px; --dy:-180px; --dur:10s; --delay:-5s; }
+
+.word-13 { right:10%; bottom:18%; --dx:-140px; --dy:  100px; --dur:10s; --delay:-7s; }
+
+.word-1  { --fadeDur: 9s;  --fadeDelay: -1s;  --opMin: 0.10; --opMax: 0.70; }
+.word-2  { --fadeDur: 12s; --fadeDelay: -7s;  --opMin: 0.05; --opMax: 0.60; }
+.word-3  { --fadeDur: 8s;  --fadeDelay: -3s;  --opMin: 0.12; --opMax: 0.80; }
+.word-4  { --fadeDur: 14s; --fadeDelay: -9s;  --opMin: 0.08; --opMax: 0.75; }
+.word-5  { --fadeDur: 10s; --fadeDelay: -2s;  --opMin: 0.10; --opMax: 0.85; }
+.word-6  { --fadeDur: 11s; --fadeDelay: -6s;  --opMin: 0.06; --opMax: 0.70; }
+.word-7  { --fadeDur: 7s;  --fadeDelay: -4s;  --opMin: 0.12; --opMax: 0.55; }
+.word-8  { --fadeDur: 15s; --fadeDelay: -10s; --opMin: 0.05; --opMax: 0.90; }
+.word-9  { --fadeDur: 9s;  --fadeDelay: -5s;  --opMin: 0.10; --opMax: 0.75; }
+.word-10 { --fadeDur: 13s; --fadeDelay: -8s;  --opMin: 0.04; --opMax: 0.55; }
+.word-11 { --fadeDur: 16s; --fadeDelay: -12s; --opMin: 0.03; --opMax: 0.65; }
+.word-12 { --fadeDur: 10s; --fadeDelay: -7s;  --opMin: 0.08; --opMax: 0.80; }
+.word-13 { --fadeDur: 12s; --fadeDelay: -11s; --opMin: 0.06; --opMax: 0.70; }
+
+</style>
+	

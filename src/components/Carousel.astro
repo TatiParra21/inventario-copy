@@ -1,0 +1,120 @@
+---
+
+import { Image } from "astro:assets";
+import ally1 from '../assets/carousel-pics/Ally1.webp'
+import ally2 from '../assets/carousel-pics/Ally2.webp'
+import ally3 from '../assets/carousel-pics/Ally3.webp'
+import ally4 from '../assets/carousel-pics/Ally4.webp'
+import ally5 from '../assets/carousel-pics/Ally5.webp'
+import ally6 from '../assets/carousel-pics/Ally6.webp'
+import ally7 from '../assets/carousel-pics/Ally7.webp'
+import ally8 from '../assets/carousel-pics/Ally8.webp'
+import ally9 from '../assets/carousel-pics/Ally9.webp'
+import ally10 from '../assets/carousel-pics/Ally10.webp'
+import ally11 from '../assets/carousel-pics/Ally11.webp'
+import ally12 from '../assets/carousel-pics/Ally12.webp'
+
+---
+
+<div class="carousel flex w-[100%]    overflow-x-hidden">
+                    <div class="flex group ">
+                        <div class="carousel__item">
+                            <Image src={ally1} class=" "  alt="Ally1" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally2} class=""  alt="Ally2" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally3} class=" "  alt="Ally3" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally4} class=" "  alt="Ally4" />
+                        </div>
+                         <div class="carousel__item">
+                            <Image src={ally5} class=" "  alt="Ally5" />
+                         </div>
+                        <div class="carousel__item">
+                            <Image src={ally6} class=" "  alt="Ally6" />   
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally7} class=" "  alt="Ally7" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally8} class=" "  alt="Ally8" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally9} class=" "  alt="Ally9" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally10} class=" "  alt="Ally10" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally11} class=" "  alt="Ally11" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally12} class=" "  alt="Ally12" />
+                        </div>
+                    </div>
+
+                     <div class="flex group ">
+                        <div class="carousel__item">
+                            <Image src={ally1} class=" "  alt="Ally1" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally2} class=""  alt="Ally2" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally3} class=" "  alt="Ally3" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally4} class=" "  alt="Ally4" />
+                        </div>
+                         <div class="carousel__item">
+                            <Image src={ally5} class=" "  alt="Ally5" />
+                         </div>
+                        <div class="carousel__item">
+                            <Image src={ally6} class=" "  alt="Ally6" />   
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally7} class=" "  alt="Ally7" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally8} class=" "  alt="Ally8" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally9} class=" "  alt="Ally9" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally10} class=" "  alt="Ally10" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally11} class=" "  alt="Ally11" />
+                        </div>
+                        <div class="carousel__item">
+                            <Image src={ally12} class=" "  alt="Ally12" />
+                        </div>
+                    </div>     
+                    </div>
+                </div>
+
+
+                
+<style>
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
+    .group{
+        animation:spin 15s linear infinite;
+        gap:1em;
+        padding-right:1em;      
+    }
+   .carousel__item img{
+    width: auto;
+    height:20vh;
+   }
+@keyframes spin{
+    from{translate:0;}
+    to{translate: -100%;}
+}
+	
+</style>

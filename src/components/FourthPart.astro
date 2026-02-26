@@ -1,0 +1,58 @@
+---
+import Header from "./Header.astro"
+import { Image } from "astro:assets";
+import P1 from '../assets/bottom-pics/P1.webp';
+import P2 from '../assets/bottom-pics/P2.webp';
+import P3 from '../assets/bottom-pics/P3.webp'; 
+import P4 from '../assets/bottom-pics/P4.webp';
+import P5 from '../assets/bottom-pics/P5.webp';
+import P6 from '../assets/bottom-pics/P6.webp';
+import P7 from '../assets/bottom-pics/P7.webp';
+import P8 from '../assets/bottom-pics/P8.webp';
+import P9 from '../assets/bottom-pics/P9.webp';
+import Carousel from "./Carousel.astro";
+import SmallIconsComp from "./SmallIconsComp.astro";
+---
+
+<div id="fourth-part" class=" min-h-screen items-center justify-center flex w-screen bg-white">
+	
+		<section class="flex px-6 w-[90%] pt-8 flex-col items-center" id="first-section">	
+				<Header />
+                <div>
+                    <div class="categories grid-cols-1 sm:grid-cols-2 grid object-contain lg:grid-cols-3 gap-4 mt-8">
+                        <Image src={P1} class="w-full h-full object-cover"  alt="P1" />
+                        <Image src={P2} class="w-full h-full object-cover"  alt="P2" />
+                        <Image src={P3} class="w-full h-full object-cover"  alt="P3" />
+                        <Image src={P4} class="w-full h-full object-cover"  alt="P4" />
+                        <Image src={P5} class="w-full h-full object-cover"  alt="P5" />
+                        <Image src={P6} class="w-full h-full object-cover"  alt="P6" />
+                        <Image src={P7} class="w-full h-full object-cover"  alt="P7" />
+                        <Image src={P8} class="w-full h-full object-cover"  alt="P8" />
+                        <Image src={P9} class="w-full h-full object-cover"  alt="P9" />
+                    </div>
+                </div>
+                <Carousel />
+                <button class="px-4 sm:text-sm mb-4 font-bold hover:border-[#9CA2AE] text-[#9CA2AE] hover:text-white 
+                bg-white hover:bg-[#9CA2AE] border-solid border-[#9CA2AE] border-2px py-2 text-lg  hover:cursor-pointer">Conectemos</button>
+                <SmallIconsComp variant="gray" />
+                <footer class="flex my-8 text-gray-400 flex-col font-[200] items-center">
+                    <p>Copyright @ 2025 Inventario Panamá</p>             
+                    <p>a GWT partner.</p>
+                </footer>
+
+		</section>
+	
+
+	
+</div>
+
+<style>
+	
+  .categories img:hover{
+    cursor:pointer;
+  }
+p{
+    margin:0;
+}
+	
+</style>
