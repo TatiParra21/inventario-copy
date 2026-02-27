@@ -1,0 +1,20 @@
+---
+import Filtro2 from '../../assets/project-pics/filtro2.webp';
+import Filtro1 from '../../assets/project-pics/filtro1.mp4';
+import CategoryComponent from '../../components/CategoryComponent.astro';
+import ImageComponent from '../../components/SmallComponents/ImageComponent.astro';
+import P6Filter from '../../assets/videos/P6-Filter.mp4';
+import VideoComponent from '../../components/SmallComponents/VideoComponent.astro';
+---
+
+<CategoryComponent mainVideo={P6Filter}
+ title="Revolucionando los trámites aduaneros con tecnología y gamificación."
+ description="TRANSIT, es una plataforma que facilita el tracking y seguimiento en cada una de las etapas de los trámites
+  aduaneros para empresas farmacéuticas dando vistas en detalles por fases tanto a la agencia aduanera, al cliente y al 
+  departamento de Farmacias y Drogas del gobierno. De este modo se puede ver en qué parte se detienen los procesos y se 
+  puede pensar en formas de mejorar." 
+
+ >
+  <VideoComponent slot="first-image" videoSrc={Filtro1} />
+    <ImageComponent slot="second-image" imgSrc={Filtro2} alt="Phone with filter interface" />
+    </CategoryComponent>

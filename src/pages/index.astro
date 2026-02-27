@@ -9,12 +9,14 @@ import FourthPart from '../components/FourthPart.astro';
 ---
 
 <Layout>
-	<div class="colored-bg">
+	<div class="h-screen touch-pan-y overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+	<div class="colored-bg ">
 	<FirstPart />
 	<SecondPart />
 	<ThirdPart />
 	</div>
 	<FourthPart />
+	</div>
 </Layout>
 
 <style>
@@ -22,4 +24,6 @@ import FourthPart from '../components/FourthPart.astro';
     min-height: 100vh;
     background: linear-gradient(115deg, #6d3bd1 0%, #7b4ae3 35%, #1b3c8f 100%);
   }
+
+
 </style>

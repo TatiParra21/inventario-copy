@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MegalodonVideo from '../../assets/videos/P1-Megalodon.mp4';
+import SingleCategoryLayout from '../layouts/SingleCategoryLayout.astro';	
+import { Image } from "astro:assets";
+import GirlWithSharkGif from '../../assets/project-pics/GirlWithShark.mp4';
+import sharkGamePic from '../../assets/project-pics/p-img-megalodon.webp'
+const {mainVideo= "", description = "", title = "", firstImage = "", secondImage = ""} = Astro.props;
+---
+<Layout>
+    <SingleCategoryLayout>
+       
+        <figure class="mt-0">
+            <video
+                class="w-screen"
+                src={mainVideo}
+                preload="auto"
+                autoplay="autoplay"
+                muted="muted"
+                playsinline
+                webkit-playsinline
+                
+                loop="loop">
+            </video>
+    </figure>
+    <div class="flex flex-col mb-8 w-[90vw] gap-4 items-center justify-center">
+        <h1 class="text-gray-500 uppercase font-medium text-[2vw]" >{title}</h1>
+        <p class="text-gray-500 text-center font-normal text-[1.2vw]">{description}</p>
+            <div class="flex flex-row gap-[4vw] mb-8 w-full">
+                    <figure class="flex-1 m-0 aspect-[4/3] overflow-hidden">
+                     <slot name="first-image"/>
+                    </figure>
+                    <figure class="flex-1 m-0 aspect-[4/3] overflow-hidden">
+                       <slot name="second-image"/>
+                    </figure>
+            </div>
+        </div>
+    </SingleCategoryLayout>
+</Layout>

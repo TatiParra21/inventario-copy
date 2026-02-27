@@ -1,0 +1,22 @@
+---
+
+import AguaSaludVideo from '../../assets/project-pics/Agua-salud.mp4';
+import AguaSaludImage from '../../assets/project-pics/p-img-agua-salud.webp';
+import CategoryComponent from '../../components/CategoryComponent.astro';
+import ImageComponent from '../../components/SmallComponents/ImageComponent.astro';
+import P5Video from '../../assets/videos/P5-Video.mp4';
+import VideoComponent from '../../components/SmallComponents/VideoComponent.astro';
+---
+
+<CategoryComponent mainVideo={P5Video}
+ title="Aprende sobre sostenibilidad y tierras con AGUA SALUD."
+ description="Agua Salud más que un juego es una plataforma educativa donde los usuarios aprenden combinando distintos 
+ tipos de parcelas de tierra cómo es afectada la sostenibilidad y durabilidad de la misma, con un estilo lúdico y educacional 
+ muy práctico. La teoría y jugabilidad fue aprobada por varios científicos del Smithsonian Tropical Research Institute, tanto de 
+ las oficinas de Panamá como las de Washington DC. Así mismo el juego fue reconocido por el FOLK LIFE FESTIVAL de SMITHSONIAN en el 
+ 2021." 
+
+ >
+  <VideoComponent slot="first-image" videoSrc={AguaSaludVideo} />
+    <ImageComponent slot="second-image" imgSrc={AguaSaludImage} alt="App about AGUA SALUD" />
+    </CategoryComponent>

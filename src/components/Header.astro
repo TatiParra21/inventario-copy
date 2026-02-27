@@ -1,15 +1,20 @@
 ---
 import inventarioLogo from '../assets/Inventario.webp';
 import { Image } from "astro:assets";
+const { position = " bg-white static" } = Astro.props;
+const {textColor = "text-[#6B7280]"} = Astro.props;
+const {logoColorVariant = "invert"} = Astro.props;
 ---
 
-<header class=" bg-white w-full  ">
+<header class={` px-[2vw] box-border  w-full ${position}  `}>
     <div class="flex justify-between  items-center">
-        <Image src={inventarioLogo} class="w-[10vw] hover:cursor-pointer h-auto invert-100" alt="inventario logo" />
-        <nav class=" flex gap-2">
-            <a href="#" class="text-[#6B7280] text-lg font-bold">Conócenos</a>
-            <a href="#" class="text-[#6B7280] text-lg font-bold">Es</a>
-            <a href="#" class="text-[#6B7280] text-lg font-bold">En</a>
+        <a href="/">
+        <Image src={inventarioLogo} class={`w-[10vw] hover:cursor-pointer h-auto   ${logoColorVariant}`} alt="inventario logo" />
+        </a>
+        <nav class=" flex gap-6">
+            <a href="#" class={`${textColor} no-underline text-lg font-bold `}>Conócenos</a>
+            <a href="#" class={`${textColor} no-underline text-lg font-bold `}>Es</a>
+            <a href="#" class={`${textColor} no-underline text-lg font-bold `}>En</a>
         </nav>
     </div>
 </header>

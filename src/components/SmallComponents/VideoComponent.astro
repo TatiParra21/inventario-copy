@@ -1,0 +1,15 @@
+---
+
+const {videoSrc} = Astro.props;
+---
+   <video
+                            class="w-full h-full object-cover "
+                            src={videoSrc}
+                            preload="auto"
+                            autoplay="autoplay"
+                            muted="muted"
+                            playsinline
+                            webkit-playsinline
+                            
+                            loop="loop">
+                        </video>

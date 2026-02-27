@@ -14,23 +14,41 @@ import Carousel from "./Carousel.astro";
 import SmallIconsComp from "./SmallIconsComp.astro";
 ---
 
-<div id="fourth-part" class=" min-h-screen items-center justify-center flex w-screen bg-white">
+<div id="fourth-part" class=" snap-start snap-normal min-h-screen items-center  justify-center flex w-full bg-white">
 	
-		<section class="flex px-6 w-[90%] pt-8 flex-col items-center" id="first-section">	
+		<section class="flex  w-screen pt-8 flex-col px-[2vw] items-center" id="first-section">	
 				<Header />
-                <div>
-                    <div class="categories grid-cols-1 sm:grid-cols-2 grid object-contain lg:grid-cols-3 gap-4 mt-8">
+                
+                    <div class="categories px-[2vw]  grid-cols-1 sm:grid-cols-2 grid object-contain lg:grid-cols-3 gap-[2vw] mt-8">
+                        <a href="/projects/project1">
                         <Image src={P1} class="w-full h-full object-cover"  alt="P1" />
+                        </a>
+                        <a href="/projects/project2">
                         <Image src={P2} class="w-full h-full object-cover"  alt="P2" />
+                        </a>
+                        <a href="/projects/project3">
                         <Image src={P3} class="w-full h-full object-cover"  alt="P3" />
+                        </a>
+                        <a href="/projects/project4">
                         <Image src={P4} class="w-full h-full object-cover"  alt="P4" />
+                        </a>
+                        <a href="/projects/project5">
                         <Image src={P5} class="w-full h-full object-cover"  alt="P5" />
+                        </a>
+                        <a href="/projects/project6">
                         <Image src={P6} class="w-full h-full object-cover"  alt="P6" />
+                        </a>
+                        <a href="/projects/project7">
                         <Image src={P7} class="w-full h-full object-cover"  alt="P7" />
+                        </a>
+                        <a href="/projects/project8">
                         <Image src={P8} class="w-full h-full object-cover"  alt="P8" />
+                        </a>
+                        <a href="/projects/project9">
                         <Image src={P9} class="w-full h-full object-cover"  alt="P9" />
+                        </a>
                     </div>
-                </div>
+               
                 <Carousel />
                 <button class="px-4 sm:text-sm mb-4 font-bold hover:border-[#9CA2AE] text-[#9CA2AE] hover:text-white 
                 bg-white hover:bg-[#9CA2AE] border-solid border-[#9CA2AE] border-2px py-2 text-lg  hover:cursor-pointer">Conectemos</button>

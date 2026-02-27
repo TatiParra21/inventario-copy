@@ -1,0 +1,20 @@
+---
+import P3Image2 from '../../assets/project-pics/P3-img2.webp';
+import P3Image1 from '../../assets/project-pics/P3-img1.webp';
+import CategoryComponent from '../../components/CategoryComponent.astro';
+import ImageComponent from '../../components/SmallComponents/ImageComponent.astro';
+import ProyectoWebVideo from '../../assets/videos/P3-Proyecto-Webs.mp4';
+---
+
+<CategoryComponent mainVideo={ProyectoWebVideo} description="En INVENTARIO, la experiencia de usuario es 
+la esencia de todo proyecto que emprendemos. Desde la
+ arquitectura de la información hasta la interacción final, 
+ combinamos gamificación, storytelling y un diseño de interfaces 
+ cuidadosamente elaborado para ofrecer experiencias digitales memorables. Nuestro compromiso es 
+ transformar cada interacción en un momento significativo, garantizando que cada sitio web, aplicación o plataforma 
+ sea tan intuitiva como atractiva." 
+ title="UI/UX: El Corazón de Nuestra Ideología"
+ >
+  <ImageComponent slot="first-image" imgSrc={P3Image1} alt="project 3 image 1" />
+ <ImageComponent slot="second-image" imgSrc={P3Image2} alt="project 3 image 2" />
+</CategoryComponent>
