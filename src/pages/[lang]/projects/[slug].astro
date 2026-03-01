@@ -1,0 +1,32 @@
+---
+import type { GetStaticPaths } from "astro";
+import { ProjectData, type ProjectType, type Lang } from '../../../pages/ProjectData.ts';
+import CategoryComponent from '../../../components/CategoryComponent.astro';
+import VideoComponent from '../../../components/SmallComponents/VideoComponent.astro';
+import ImageComponent from '../../../components/SmallComponents/ImageComponent.astro';
+
+export const getStaticPaths = (() => {
+const langs:Lang[] = ['en', 'es'];
+const slugs = Object.keys(ProjectData);
+
+
+    
+    return langs.flatMap(lang => slugs.map(slug => ({ params: { lang, slug } })));
+}) satisfies GetStaticPaths;
+const { lang, slug } = Astro.params;
+const project = ProjectData[slug];
+const info = project[lang]
+
+
+console.log(`/projects/${slug}`, "HERE");
+---
+
+<CategoryComponent lang={lang} route={`/projects/${slug}`} mainVideo={project.MainVideo} description={info.desc} title={info.title} 
+  >
+  {project.slots.first.kind === "video" ? <VideoComponent slot="first-image" videoSrc={project.slots.first.src} /> :
+  <ImageComponent slot="first-image" imgSrc={project.slots.first.src} alt={project.slots.first?.alt} />  }
+
+{project.slots.second.kind === "video" ? <VideoComponent slot="second-image" videoSrc={project.slots.second.src} /> :
+  <ImageComponent slot="second-image" imgSrc={project.slots.second.src} alt={project.slots.second?.alt}  />  }
+
+</CategoryComponent>

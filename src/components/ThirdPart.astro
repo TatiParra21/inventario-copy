@@ -1,24 +1,25 @@
 ---
 import arrowGif from '../assets/Icon-arrow-down.gif';
 import { Image } from "astro:assets";
+const {lang = "es"} = Astro.props
 ---
 
 <div id="third-part" class="  snap-center h-screen snap-normal  flex flex-col items-center justify-center w-screen ">
 	
 		<section class="words-area" id="first-section">			
-                        <h2 class="word word-1">CREATIVIDAD</h2>
-                        <h2 class="word word-2">UX UI</h2>
-                        <h2 class="word word-3">2D &amp; 3D MOTION</h2>
-                        <h2 class="word word-4">AI AGENTS</h2>
-                        <h2 class="word word-5">DISEÑO INTERACTIVO</h2>
-                        <h2 class="word word-6">SOFTWARES</h2>
-                        <h2 class="word word-7">IA</h2>
-                        <h2 class="word word-8">EXPERIENCIAS INMERSIVAS</h2>
-                        <h2 class="word word-9">APPS</h2>
-                        <h2 class="word word-10">ROBÓTICA</h2>
-                        <h2 class="word word-11">PLATAFORMAS WEB</h2>
-                        <h2 class="word word-12">PWAS</h2>
-                        <h2 class="word word-13">ECOMMERCES</h2>
+                        <h2 class="word word-1">{lang === "es" ? "CREATIVIDAD" : "CREATIVITY"}</h2>
+                        <h2 class="word word-2">{lang === "es" ? "UX UI" : "UX UI"}</h2>
+                        <h2 class="word word-3">{lang === "es" ? "2D & 3D MOTION" : "2D & 3D MOTION"}</h2>
+                        <h2 class="word word-4">{lang === "es" ? "AI AGENTS" : "AI AGENTS"}</h2>
+                        <h2 class="word word-5">{lang === "es" ? "DISEÑO INTERACTIVO" : "INTERACTIVE DESIGN"}</h2>
+                        <h2 class="word word-6">{lang === "es" ? "SOFTWARES" : "SOFTWARES"}</h2>
+                        <h2 class="word word-7">{lang === "es" ? "IA" : "AI"}</h2>
+                        <h2 class="word word-8">{lang === "es" ? "EXPERIENCIAS INMERSIVAS" : "IMMERSIVE EXPERIENCES"}</h2>
+                        <h2 class="word word-9">{lang === "es" ? "APPS" : "APPS"}</h2>
+                        <h2 class="word word-10">{lang === "es" ? "ROBÓTICA" : "ROBOTICS"}</h2>
+                        <h2 class="word word-11">{lang === "es" ? "PLATAFORMAS WEB" : "WEB PLATFORMS"}</h2>
+                        <h2 class="word word-12">{lang === "es" ? "PWAS" : "PWAS"}</h2>
+                        <h2 class="word word-13">{lang === "es" ? "ECOMMERCES" : "ECOMMERCE PLATFORMS"}</h2>
 		</section>
                 <a href="#fourth-part">
 			<Image src={arrowGif} class="h-[10vh] w-auto hover:cursor-pointer" alt="arrow down gif"/>

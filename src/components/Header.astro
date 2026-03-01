@@ -4,6 +4,9 @@ import { Image } from "astro:assets";
 const { position = " bg-white static" } = Astro.props;
 const {textColor = "text-[#6B7280]"} = Astro.props;
 const {logoColorVariant = "invert"} = Astro.props;
+const {lang = "es", route = ""} = Astro.props
+const insideProject =  route !== "/AboutUs" && route !== "/en/AboutUs" && route !== "/en"  && route !== "/" 
+const insideAboutUs = route === "/AboutUs" || route === "/en/AboutUs"
 ---
 
 <header class={` px-[2vw] box-border  w-full ${position}  `}>
@@ -12,9 +15,9 @@ const {logoColorVariant = "invert"} = Astro.props;
         <Image src={inventarioLogo} class={`w-[10vw] hover:cursor-pointer h-auto   ${logoColorVariant}`} alt="inventario logo" />
         </a>
         <nav class=" flex gap-6">
-            <a href="#" class={`${textColor} no-underline text-lg font-bold `}>Conócenos</a>
-            <a href="#" class={`${textColor} no-underline text-lg font-bold `}>Es</a>
-            <a href="#" class={`${textColor} no-underline text-lg font-bold `}>En</a>
+            <a href={lang === "es" ? "/AboutUs" : "/en/AboutUs" } class={`${textColor} no-underline text-lg font-bold `}>{lang === "es" ? "Conócenos" : "About Us"}</a>
+            <a href={insideProject ? `/es${route}` : insideAboutUs ? `/AboutUs` : "/"} class={`${textColor} no-underline text-lg font-bold `}>Es</a>
+            <a href={insideProject ? `/en${route}`: insideAboutUs  ? `/en/AboutUs` : "/en"} class={`${textColor} no-underline text-lg font-bold `}>En</a>
         </nav>
     </div>
 </header>

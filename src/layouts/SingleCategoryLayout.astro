@@ -1,12 +1,13 @@
 ---
 import Header from "../components/Header.astro"
-import { Image } from "astro:assets";
-import Layout from "./Layout.astro";
+
 import SmallIconsComp from "../components/SmallIconsComp.astro";
+
+const {lang = "es", route = ""} = Astro.props
 ---
 
     <section class="flex flex-col w-full gap-2 box-border justify-center relative items-center">
-        <Header position="absolute bg-transparent invert pt-6 top-0  z-1 " logoColorVariant=" invert" textColor="text-black"/>
+        <Header lang={lang} route={route} position="absolute bg-transparent invert pt-6 top-0  z-1 " logoColorVariant=" invert" textColor="text-black"/>
             <slot/>
         <button class="px-4  w-[40vw] sm:text-sm mb-4 font-bold hover:border-[#9CA2AE] text-[#9CA2AE] hover:text-white 
                     bg-white hover:bg-[#9CA2AE] border-solid border-[#9CA2AE] border-2px py-[0.5vw] text-lg  hover:cursor-pointer">Conectemos</button>

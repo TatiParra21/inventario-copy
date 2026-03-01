@@ -1,0 +1,154 @@
+<section class="hero">
+  <div class="bg-blobs" id="bg-blobs">
+    <!-- blobs animados -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- blob que sigue el mouse -->
+    <div class="blob blob-cursor" id="blob-cursor"></div>
+
+    <!-- capa extra para suavizar (opcional) -->
+    <div class="soften"></div>
+  </div>
+
+  <div class="content">
+    <!-- TU CONTENIDO ENCIMA -->
+   <slot/>
+  </div>
+</section>
+
+<script is:inline>
+  const container = document.getElementById("bg-blobs");
+  const cursorBlob = document.getElementById("blob-cursor");
+
+  // Para que no salte: guardamos una posición actual y una "meta"
+  let currentX = 50, currentY = 50;
+  let targetX = 50, targetY = 50;
+  let follow = false;
+
+  function animate() {
+    // "lerp" (suavizado)
+    currentX += (targetX - currentX) * 0.12;
+    currentY += (targetY - currentY) * 0.12;
+
+    cursorBlob.style.setProperty("--mx", currentX + "%");
+    cursorBlob.style.setProperty("--my", currentY + "%");
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // Solo sigue el mouse cuando el cursor está encima del contenedor
+  container.addEventListener("mouseenter", () => (follow = true));
+  container.addEventListener("mouseleave", () => (follow = false));
+
+  container.addEventListener("mousemove", (e) => {
+    if (!follow) return;
+
+    const rect = container.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+    targetX = Math.max(0, Math.min(100, x));
+    targetY = Math.max(0, Math.min(100, y));
+  });
+</script>
+
+<style>
+    .hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.bg-blobs {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, #6d3bd1 0%, #7b4ae3 35%, #1b3c8f 100%);
+  overflow: hidden;
+}
+
+/* Contenido por encima */
+.content {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: white;
+}
+
+/* Base blob */
+.blob {
+  position: absolute;
+  width: 38vmax;
+  height: 38vmax;
+  border-radius: 999px;
+  filter: blur(60px);
+  opacity: 0.55;
+  transform: translate3d(0,0,0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Blob 1 */
+.blob-1 {
+  top: -10%;
+  left: -10%;
+  background: rgba(255, 140, 80, 0.75);
+  animation: drift1 14s ease-in-out infinite alternate;
+}
+
+/* Blob 2 */
+.blob-2 {
+  top: 10%;
+  right: -15%;
+  background: rgba(120, 120, 255, 0.65);
+  animation: drift2 18s ease-in-out infinite alternate;
+}
+
+/* Blob 3 */
+.blob-3 {
+  bottom: -20%;
+  left: 20%;
+  background: rgba(180, 120, 255, 0.65);
+  animation: drift3 16s ease-in-out infinite alternate;
+}
+
+/* Blob que sigue el mouse */
+.blob-cursor {
+  /* usamos variables CSS --mx y --my */
+  left: calc(var(--mx, 50) * 1%);
+  top: calc(var(--my, 50) * 1%);
+  transform: translate(-50%, -50%);
+  width: 34vmax;
+  height: 34vmax;
+  background: rgba(255, 255, 255, 0.22);
+  opacity: 0.35;
+  filter: blur(70px);
+}
+
+/* Capa extra (opcional) para suavizar */
+.soften {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(10px);
+  /* si no quieres blur extra, puedes quitar esto */
+  pointer-events: none;
+}
+
+/* Animaciones */
+@keyframes drift1 {
+  0% { transform: translate(-10%, -5%) scale(1); }
+  100% { transform: translate(10%, 8%) scale(1.12); }
+}
+@keyframes drift2 {
+  0% { transform: translate(8%, -5%) scale(1); }
+  100% { transform: translate(-10%, 10%) scale(1.08); }
+}
+@keyframes drift3 {
+  0% { transform: translate(0%, 10%) scale(1); }
+  100% { transform: translate(12%, -8%) scale(1.1); }
+}
+</style>

@@ -1,0 +1,106 @@
+---
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+import SmallIconsComp from "../../components/SmallIconsComp.astro";
+import Image from "astro/components/Image.astro";
+import SVG1 from "../../assets/SVGs/S1.svg";
+import SVG2 from "../../assets/SVGs/S2.svg";
+import SVG3 from "../../assets/SVGs/S3.svg";
+import SVG4 from "../../assets/SVGs/S4.svg";
+import SVG5 from "../../assets/SVGs/S5.svg";
+import SVG6 from "../../assets/SVGs/S6.svg";
+import SVG7 from "../../assets/SVGs/S7.svg";
+import SVG8 from "../../assets/SVGs/S8.svg";
+import SVG9 from "../../assets/SVGs/S9.svg";
+---
+
+<Layout>
+    
+    <section class="flex flex-col w-screen items-center pt-4 justify-center ">
+        
+        <Header lang="en" route="/en/AboutUs" textColor="text-gray-400 text-[1.2vw]"></Header>
+        <div class="flex flex-col w-[90%] items-center justify-center"></div>
+            <div class="gap-[1vw] w-[50%] ">
+                <p class="font-normal text-[1.2vw]  text-gray-500">Inventario is a multidisciplinary 
+                    innovation and digital transformation lab 100% Panamanian. Founded in 2018, specializing in creation of
+                    “Human-Centered Products“. We focus on driving the evolution of brands and 
+                    organizations through technological solutions in UX/UI, software development, e-commerce, 
+                    video games and cutting-edge digital products, In addition to a high strategic integration 
+                    of artificial intelligence and robotics. 
+                    <br>
+                    <br>We offer solutions designed to optimize the user experience, automate processes and create
+                     digital products that position our clients at the top of the global industry.
+                    <br>
+                    <br> We have worked with organizations and entities of utmost importance at a regional level such
+                     as the Smithsonian Tropical Research Institute, The National Library of Panama, City of Knowledge,
+                      Vital Voices Foundation, the National Mortgage Bank of Panama, City of Knowledge, The Center for 
+                      Research and Hydro-environmental Technology and international companies with mass consumption brands 
+                      \such as Nestlé, Heineken, Under Armour, MORE, Cerro Punta, among others.
+                    <br>
+                    <br> 
+                    Together we can create products that transcend convention and connect deeply with today's audiences.
+                </p>
+            </div>
+            <div class="w-[50%] grid grid-cols-3 gap-10 mt-12 place-items-center ">
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG1} alt="SVG1" class="aspect-square w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG2} alt="SVG2" class="aspect-square w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG3} alt="SVG3" class="aspect-square w-[50%] flex-1" />
+                </div>
+                <div>
+                    <Image src={SVG4} alt="SVG4" class="aspect-square w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG5} alt="SVG5" class="aspect-square w-[50%] flex-1" />
+                </div>
+                <div>
+                    <Image src={SVG6} alt="SVG6" class="aspect-square w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG7} alt="SVG7" class="aspect-square w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG8} alt="SVG8" class="aspect-square w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG9} alt="SVG9" class="aspect-square w-[50%] flex-1" />
+                </div>
+
+            </div>
+            <p id="conversemos" class="text-center text-gray-400">Let's talk</p>
+            <form class="flex flex-col pb-4 gap-4 w-[50%] mt-4">
+                <input class="border border-solid border-2 border-gray-300 py-[0.5vw] placeholder:text-gray-400 pl-[1vw]" type="text" placeholder="Name">
+                <input class="border border-solid border-2 border-gray-300 py-[0.5vw] pl-[1vw] placeholder:text-gray-400" type="email" placeholder="Email">
+                <textarea class="font-normal font-sans border border-solid border-2 border-gray-300 py-[0.5vw] pl-[1vw] placeholder:text-gray-400" placeholder="What do you want to do?"></textarea>
+                <input class="border border-solid border-2 border-gray-300 py-[0.5vw] pl-[1vw] placeholder:text-gray-400" type="number" placeholder="Phone">
+                <input class="border border-solid border-2 border-gray-300 py-[0.5vw] pl-[1vw] placeholder:text-gray-400" type="text" placeholder="Company">
+                <iframe src="https://newassets.hcaptcha.com/captcha/v1/99545960b07f29a0560c13139a25d6843f9306c0/static/hcaptcha.html#frame=checkbox&amp;id=0ef1raiyx1st&amp;host=www.inventario.design&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=true&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;andint=off&amp;pstissuer=https%3A%2F%2Fpst-issuer.hcaptcha.com&amp;sitekey=bf52ae3f-bd8d-471c-9758-a3eccab0c40b&amp;theme=light&amp;origin=https%3A%2F%2Fwww.inventario.design" 
+                tabindex="0" 
+                title="Widget containing checkbox for hCaptcha security challenge" 
+                 style="pointer-events: auto; background-color: rgba(255, 255, 255, 0);
+                  border-radius: 4px; width: 302px; height: 76px; overflow: hidden;"></iframe>
+                    <button class="px-4 sm:text-sm mb-4 font-bold hover:border-[#9CA2AE] text-[#9CA2AE] hover:text-white 
+                bg-white hover:bg-[#9CA2AE] border-solid border-[#9CA2AE] border-2px py-2 text-lg  hover:cursor-pointer">Send</button>
+
+
+
+            </form>
+
+            
+                <SmallIconsComp variant="invert-[0.50]" />
+                <footer class="flex my-8  text-gray-400 flex-col font-[200] items-center">
+                    <p class="m-0">Copyright @ 2025 Inventario Panamá</p>             
+                    <p class="m-0">a GWT partner.</p>
+                </footer>
+    </div>
+    </section>
+</Layout>
+
+<style>
+
+#conversemos { scroll-margin-top: 12px; }
+</style>

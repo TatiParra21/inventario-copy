@@ -1,0 +1,108 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import SmallIconsComp from "../components/SmallIconsComp.astro";
+import Image from "astro/components/Image.astro";
+import SVG1 from "../assets/SVGs/S1.svg";
+import SVG2 from "../assets/SVGs/S2.svg";
+import SVG3 from "../assets/SVGs/S3.svg";
+import SVG4 from "../assets/SVGs/S4.svg";
+import SVG5 from "../assets/SVGs/S5.svg";
+import SVG6 from "../assets/SVGs/S6.svg";
+import SVG7 from "../assets/SVGs/S7.svg";
+import SVG8 from "../assets/SVGs/S8.svg";
+import SVG9 from "../assets/SVGs/S9.svg";
+---
+
+<Layout>
+    
+    <section class="flex flex-col w-screen items-center pt-4 justify-center ">
+        
+        <Header lang="es" route="/AboutUs" textColor="text-gray-400 text-[1.2vw]"></Header>
+        <div class="flex flex-col w-[90%] items-center justify-center"></div>
+            <div class="gap-[1vw] w-[50%] ">
+                <p class="font-normal text-[1.2vw]  text-gray-500">Inventario es un laboratorio de innovación y transformación digital multidisciplinario 100% Panameño. 
+                    Fundado en 2018, especializados en creación de “Human-Centered Products“. Nos enfocamos en impulsar
+                    la evolución de marcas y organizaciones a través de soluciones tecnológicas en UX/UI, desarrollo de 
+                    software, e-commerce, videojuegos y productos digitales de vanguardia, Además de una alta integración 
+                    estratégica de inteligencia artificial y robótica. 
+                    <br>
+                    <br>Ofrecemos soluciones diseñadas para optimizar la 
+                    experiencia del usuario, automatizar procesos y crear productos digitales que posicionan a nuestros 
+                    clientes en la cúspide de la industria global.
+                    <br>
+                    <br> Hemos trabajado con Organizaciones y entidades de suma 
+                    importancia a nivel regional como lo son el Smithsonian Tropical Research Institute, La Biblioteca 
+                    Nacional de Panamá, Ciudad del Saber, Fundación Voces Vitales, el Banco Hipotecario Nacional de Panamá, 
+                    Ciudad del Saber, El Centro de Investigación y Tecnología Hidroambiental y empresas internacionales con 
+                    marcas de consumo masivo como Nestlé, Heineken, Under Armour, MORE, Cerro Punta, entre otras.
+                    <br>
+                    <br> Juntos podemos 
+                    crear productos que trasciendan lo convencional y conecten de manera profunda con las audiencias de hoy.
+                </p>
+            </div>
+            <div class="w-[50%] grid grid-cols-3 gap-10 mt-12 place-items-center ">
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG1} alt="SVG1" class="aspect-square img-class w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG2} alt="SVG2" class="aspect-square img-class w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG3} alt="SVG3" class="aspect-square img-class w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG4} alt="SVG4" class="aspect-square img-class w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center  justify-center">
+                    <Image src={SVG5} alt="SVG5" class="aspect-square img-class w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center justify-center">
+                    <Image src={SVG6} alt="SVG6" class="aspect-square img-class w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center  justify-center">
+                    <Image src={SVG7} alt="SVG7" class="aspect-square  img-class w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center  justify-center">
+                    <Image src={SVG8} alt="SVG8" class="aspect-square img-class w-[50%] flex-1" />
+                </div>
+                <div class="w-full aspect-square flex items-center  justify-center">
+                    <Image src={SVG9} alt="SVG9" class="aspect-square img-class w-[50%] flex-1" />
+                </div>
+
+            </div>
+            <p id="conversemos" class="text-center text-gray-400">Conversemos</p>
+            <form class="flex flex-col pb-4 gap-4 w-[50%] mt-4">
+                <input class="border border-solid border-2 border-gray-300 py-[0.5vw] placeholder:text-gray-400 pl-[1vw]" type="text" placeholder="Nombre">
+                <input class="border border-solid border-2 border-gray-300 py-[0.5vw] pl-[1vw] placeholder:text-gray-400" type="email" placeholder="Correo">
+                <textarea class="font-normal font-sans border border-solid border-2 border-gray-300 py-[0.5vw] pl-[1vw] placeholder:text-gray-400" placeholder="¿Que quieres hacer?"></textarea>
+                <input class="border border-solid border-2 border-gray-300 py-[0.5vw] pl-[1vw] placeholder:text-gray-400" type="number" placeholder="Teléfono">
+                <input class="border border-solid border-2 border-gray-300 py-[0.5vw] pl-[1vw] placeholder:text-gray-400" type="text" placeholder="Empresa">
+                <iframe src="https://newassets.hcaptcha.com/captcha/v1/99545960b07f29a0560c13139a25d6843f9306c0/static/hcaptcha.html#frame=checkbox&amp;id=0ef1raiyx1st&amp;host=www.inventario.design&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=true&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;andint=off&amp;pstissuer=https%3A%2F%2Fpst-issuer.hcaptcha.com&amp;sitekey=bf52ae3f-bd8d-471c-9758-a3eccab0c40b&amp;theme=light&amp;origin=https%3A%2F%2Fwww.inventario.design" 
+                tabindex="0" 
+                title="Widget containing checkbox for hCaptcha security challenge" 
+                 style="pointer-events: auto; background-color: rgba(255, 255, 255, 0);
+                  border-radius: 4px; width: 302px; height: 76px; overflow: hidden;"></iframe>
+                    <button class="px-4 sm:text-sm mb-4 font-bold hover:border-[#9CA2AE] text-[#9CA2AE] hover:text-white 
+                bg-white hover:bg-[#9CA2AE] border-solid border-[#9CA2AE] border-2px py-2 text-lg  hover:cursor-pointer">Enviar</button>
+
+
+
+            </form>
+
+            
+                <SmallIconsComp variant="invert-[0.50]" />
+                <footer class="flex my-8  text-gray-400 flex-col font-[200] items-center">
+                    <p class="m-0">Copyright @ 2025 Inventario Panamá</p>             
+                    <p class="m-0">a GWT partner.</p>
+                </footer>
+    </div>
+    </section>
+</Layout>
+
+<style>
+.img-class{
+    height:100%;
+}
+#conversemos { scroll-margin-top: 12px; }
+</style>

@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import SecondPart from '../components/SecondPart.astro';
 import ThirdPart from '../components/ThirdPart.astro';
 import FourthPart from '../components/FourthPart.astro';	
+import BlurBackgroundComp from '../components/BlurBackgroundComp.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -11,11 +12,13 @@ import FourthPart from '../components/FourthPart.astro';
 <Layout>
 	<div class="h-screen touch-pan-y overflow-y-scroll snap-y snap-mandatory scroll-smooth">
 	<div class="colored-bg ">
+		
 	<FirstPart />
-	<SecondPart />
-	<ThirdPart />
+	
+	<SecondPart lang="es" />
+	<ThirdPart lang="es" />
 	</div>
-	<FourthPart />
+	<FourthPart lang="es" />
 	</div>
 </Layout>
 

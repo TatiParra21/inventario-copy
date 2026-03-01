@@ -1,0 +1,28 @@
+---
+import FirstPart from '../../components/FirstPart.astro';
+import Layout from '../../layouts/Layout.astro';
+import SecondPart from '../../components/SecondPart.astro';
+import ThirdPart from '../../components/ThirdPart.astro';
+import FourthPart from '../../components/FourthPart.astro';	
+
+---
+
+<Layout>
+	<div class="h-screen touch-pan-y overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+	<div class="colored-bg ">
+	<FirstPart  />
+	<SecondPart lang="en" />
+	<ThirdPart lang="en" />
+	</div>
+	<FourthPart lang="en" />
+	</div>
+</Layout>
+
+<style>
+		 .colored-bg{
+    min-height: 100vh;
+    background: linear-gradient(115deg, #6d3bd1 0%, #7b4ae3 35%, #1b3c8f 100%);
+  }
+
+
+</style>

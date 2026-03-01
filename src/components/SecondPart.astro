@@ -1,13 +1,16 @@
 ---
 import arrowGif from '../assets/Icon-arrow-down.gif';
 import { Image } from "astro:assets";
+const {lang = "es"} = Astro.props
 ---
 
 <div id="second-part" class="h-screen snap-center snap-normal  flex-col flex items-center justify-center w-screen ">
 	
 		<section class="flex flex-col items-center justify-center" id="first-section">
 			
-				<h3 class="text-center text-white font-normal  mx-auto max-w-[85vw] leading-[1.2] tracking-[-0.05em] text-[5vw]">Diseñamos nuevas experiencias, fusionando la interacción lúdica, creatividad, robótica y tecnología.</h3>
+				<h3 class="text-center text-white font-normal  mx-auto max-w-[85vw] leading-[1.2] tracking-[-0.05em] text-[5vw]">
+					{lang === "es" ? "Diseñamos nuevas experiencias, fusionando la interacción lúdica, creatividad, robótica y tecnología." 
+					: "We design new experiences, fusing playful interaction, creativity, robotics, and technology."}</h3>
 		</section>
 		<a href="#third-part">
 			<Image src={arrowGif} class="h-[10vh] w-auto hover:cursor-pointer" alt="arrow down gif"/>
