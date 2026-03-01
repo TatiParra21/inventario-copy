@@ -15,7 +15,7 @@ import P3Image2 from '../assets/project-pics/P3-img2.webp';
 //Fourth Project
 import P6Filter from '../assets/videos/P6-Filter.mp4';
 import Filtro2 from '../assets/project-pics/filtro2.webp';
-import Filtro1 from '../assets/project-pics/filtro1.mp4';
+import Filtro1 from '../assets/project-pics/Filtro1.mp4';
 //Fifth Project
 import P5Video from '../assets/videos/P5-Video.mp4';
 import AguaSaludVideo from '../assets/project-pics/Agua-salud.mp4';
