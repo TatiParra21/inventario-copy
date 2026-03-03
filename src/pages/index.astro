@@ -10,27 +10,26 @@ import BlurBackgroundComp from '../components/BlurBackgroundComp.astro';
 ---
 
 <Layout>
-	<div class="capa-1 colored-bg gradient-bg bg-gradient-to-r from-violet-900 to-blue-900">
+	<div class="capa-1 h-screen fixed inset-0 z-[-1] w-full colored-bg gradient-bg bg-gradient-to-r from-violet-900 to-blue-900">
 			<BlurBackgroundComp/>
 		</div>		
-	<div class=" w-[100vw] overflow-x-hidden touch-pan-y overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+	<main class="  w-[100vw]  h-screen snap-mandatory overflow-y-snap overflow-x-hidden touch-pan-y  snap-y  scroll-smooth">
 		
 			<FirstPart/>				
 			<SecondPart lang="es" />
 			<ThirdPart lang="es" />
 		
 		<FourthPart lang="es" />
-	</div>
+	</main>
 </Layout>
 
 <style>
 	
 .capa-1{
-	height: 300svh;
-	z-index: -1;
-	position: absolute;
-	top:0;
-	width: 100vw;
+
+	
+	
+	
 }
   
 
