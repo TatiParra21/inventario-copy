@@ -1,37 +1,64 @@
 	<div class="blur-class blur1"></div>
 			<div class="blur-class blur2"></div>
 			<div class="blur-class blur3"></div>
+			  <div class="mouse-light"></div>
 
 <style>
  .blur-class{
-	width: 700px;
-	height: 200px;
+	width: 50vw;
+	height: 50vw;
 	filter: blur(80px);
+	border-radius: 50%;
 
 }
   .blur1{
 	position:absolute;
 	background: rgba(255, 140, 90, 0.8);
-	left:1%;
-	bottom:20%;
-	
+	left:-6%;
+	top:-1%;
 	
   }
   .blur2{
 	position:absolute;
 	 background: rgba(125, 199, 102, 0.7);
-	left:3%;
-	bottom:80%;
-	 
+	right:3%;
+	bottom:40%; 
   }
     .blur3{
 	position:absolute;
 	background: rgba(70, 120, 255, 0.7);
-	right:5%;
-	bottom:5%;
-	
-	
+	right:40%;
+	bottom:-10%;
   }
-
+	
+.mouse-light {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+   mix-blend-mode: screen;
+    opacity: 0.4;
+  background: radial-gradient(
+    circle 900px at 50% 50%,
+    rgba(255,255,255,0.4),
+    transparent 80%
+  );
+}
 
 </style>
+
+<script is:inline>
+  const light = document.querySelector('.mouse-light');
+
+  window.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    light.style.background = `
+      radial-gradient(
+        circle  900px at ${x}px ${y}px,
+        rgba(255,255,255,0.4),
+        transparent 80%
+      )
+    `;
+  });
+</script>

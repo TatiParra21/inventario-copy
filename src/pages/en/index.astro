@@ -4,25 +4,33 @@ import Layout from '../../layouts/Layout.astro';
 import SecondPart from '../../components/SecondPart.astro';
 import ThirdPart from '../../components/ThirdPart.astro';
 import FourthPart from '../../components/FourthPart.astro';	
-
+import BlurBackgroundComp from '../../components/BlurBackgroundComp.astro';
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<div class="h-screen touch-pan-y overflow-y-scroll snap-y snap-mandatory scroll-smooth">
-	<div class="colored-bg ">
-	<FirstPart  />
-	<SecondPart lang="en" />
-	<ThirdPart lang="en" />
-	</div>
-	<FourthPart lang="en" />
-	</div>
+	<div class="capa-1 h-screen fixed inset-0 z-[-1] w-full colored-bg gradient-bg bg-gradient-to-r from-violet-900 to-blue-900">
+			<BlurBackgroundComp/>
+		</div>		
+	<main class="  w-[100vw]  h-screen snap-mandatory overflow-y-snap overflow-x-hidden touch-pan-y  snap-y  scroll-smooth">
+		
+			<FirstPart/>				
+			<SecondPart lang="en" />
+			<ThirdPart lang="en" />
+		
+		<FourthPart lang="en" />
+	</main>
 </Layout>
 
 <style>
-		 .colored-bg{
-    min-height: 100vh;
-    background: linear-gradient(115deg, #6d3bd1 0%, #7b4ae3 35%, #1b3c8f 100%);
-  }
+	
+.capa-1{
 
+	
+	
+	
+}
+  
 
 </style>
